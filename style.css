@@ -1,0 +1,481 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .nav-links .btn {
+    padding: 0.5rem 1rem;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .nav-links .btn:hover {
+    background-color: #218838;
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('images/medic6.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .hero-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .hero-btn {
+      padding: 0.5rem 1rem;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #007BFF;
+      border-radius: 5px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
+  .about-us {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #007BFF;
+  }
+  
+  .about-us p {
+    font-size: 1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .feature {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .feature img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+  }
+  
+  .feature p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature {
+      width: 100%;
+    }
+  }
+  
+  .services {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #007BFF;
+  }
+  
+  .services p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.8; 
+  }
+  
+  .service {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .service-text {
+    flex: 1;
+  }
+  
+  .service-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+  }
+  
+  .service-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8; 
+    text-align: left;
+  }
+  
+  .service-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .service-image img {
+    max-width: 75%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .service {
+      flex-direction: column;
+    }
+  
+    .service.reverse {
+      flex-direction: column;
+    }
+  
+    .service-image img {
+      width: 90%; 
+    }
+  }
+  
+  /* Section Styles */
+  .content-section {
+    background: url('images/medic7.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .content-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .content-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+  }
+  
+  .content-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+  }
+  
+  .content-box p {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+  }
+  
+  .content-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    text-align: left;
+  }
+  
+  .content-box ul li {
+    margin-bottom: 10px;
+  }
+  
+  .content-box a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  
+  /* Footer Styles */
+.footer {
+    position: relative;
+    background: #001f4d; 
+    color: #fff;
+    padding: 3rem 1rem;
+    overflow: hidden;
+  }
+  
+  /* Wave Divider */
+  .footer-wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('path-to-wave.svg') no-repeat center;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  /* Container */
+  .footer .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-content div {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-about h3,
+  .footer-links h3,
+  .footer-contact h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .footer-about p,
+  .footer-contact p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .footer-links {
+    text-align: center;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block; 
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem; 
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: scale(1.05);
+  }
+  
+  /* Social Media */
+  .footer-social {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .footer-social .social-icon {
+    margin: 0 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #fff;
+    transform: scale(1.2);
+  }
+  
+  /* Copyright */
+  .footer-bottom {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-content div {
+      min-width: 100%;
+    }
+  }
+  
